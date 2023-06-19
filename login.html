@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <style>
+           
+           body{
+            background-color: orange;
+            background-image: url(login.avif);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 1590px 750px;
+        }
+          
+        </style>
+        </head>
+        <body>
+            <script>
+
+                setInterval(Changecolor, 1000);
+                
+                function Changecolor() {
+                var x= document.getElementById("heading");
+                
+                if (x.style.color=="pink")
+                   x.style.color="red";
+                
+                else if (x.style.color=="red")  
+                    x.style.color="blue";
+                
+                else if (x.style.color=="blue")  
+                    x.style.color="green";
+                
+                else if (x.style.color=="green")  
+                    x.style.color="yellow";
+                
+                else x.style.color = "pink";
+                }
+                
+                
+               
+                </script>
+                <h1 id="heading" style="font-size: 35px; font-style:italic;text-align:center">  Welcome to CEH's world </h1>
+            <center>
+            <input class="a" type="text" id="name" placeholder="Enter your id" style="border-radius: 25px 45px;width:355px;height:25px;margin-top:180px">
+            <br>
+<form name="myform" method="post" onsubmit="return validpassword()" action="file:///C:/Users/jilan/Desktop/CEH/menu2.html">
+<br>
+     <input class="a"  type="password" name="pass1" placeholder="Enter password" style="border-radius: 20px 45px;width:355px;height:25px">
+    <br><br>
+    <input class="a"  type="submit" value="login" style="border-radius: 45px 20px;width:215px;height:25px">
+
+    </form>
+
+    <script>
+    
+    function validpassword(){
+    var password=document.myform.pass1.value;
+    var cpassword=document.myform.pass2.value;
+    
+    if(password.length<8) {
+    alert("Password must contain 8 characters");
+    return false;
+    } 
+    
+    if (password==cpassword){
+    return true;
+    }
+    else{ alert("Plese enter correct password");
+    return false;
+    }
+    }
+    
+    </script>
+    </center>
+        
+            </body>
+            </html>
